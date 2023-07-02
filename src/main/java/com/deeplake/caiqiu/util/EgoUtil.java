@@ -1,7 +1,6 @@
 package com.deeplake.caiqiu.util;
 
 import com.deeplake.caiqiu.items.EgoArmor;
-import com.deeplake.caiqiu.registry.ItemRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
@@ -33,17 +32,7 @@ public class EgoUtil {
 
     public static Item getItemForEgoAndStack(EquipmentSlotType slot, MJDSDefine.EnumEgo state)
     {
-        final int slotIndex = slot.getIndex();
-        if (slotIndex >= ItemRegistry.APHRODITE_ARMOR.length || slotIndex < 0)
-        {
-            return Items.AIR;
-        }
-        //inverted order in EquipmentSlotType
-        if (APHRODITE == state){
-            return ItemRegistry.APHRODITE_ARMOR[3 - slotIndex].get();
-        } else {
-            return ItemRegistry.POPOLON_ARMOR[3 - slotIndex].get();
-        }
+        return Items.AIR;
     }
 
     public static boolean isReplacable(ItemStack stack)

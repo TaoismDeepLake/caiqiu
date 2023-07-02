@@ -1,18 +1,10 @@
 package com.deeplake.caiqiu;
 
 import com.deeplake.caiqiu.blocks.INeedInit;
-import com.deeplake.caiqiu.entities.EntityMJDSSkeleton;
-import com.deeplake.caiqiu.registry.BlockRegistry;
-import com.deeplake.caiqiu.registry.EntityRegistry;
 import com.deeplake.caiqiu.registry.RegistryManager;
 import com.deeplake.caiqiu.worldgen.infra.InitWorldGen;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.client.renderer.color.BlockColors;
-import net.minecraft.entity.ai.attributes.GlobalEntityTypeAttributes;
-import net.minecraft.entity.monster.MonsterEntity;
-import net.minecraft.world.biome.BiomeColors;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.fml.common.Mod;

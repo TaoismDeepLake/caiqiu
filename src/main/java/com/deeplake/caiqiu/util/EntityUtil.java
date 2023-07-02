@@ -1,6 +1,5 @@
 package com.deeplake.caiqiu.util;
 
-import com.deeplake.caiqiu.entities.IMjdsMonster;
 import com.google.common.base.Predicate;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
@@ -45,14 +44,6 @@ public class EntityUtil {
         public boolean apply(@Nullable Entity entity)
         {
             return entity != null;
-        }
-    };
-
-    public static final Predicate<Entity> IS_MJDS = new Predicate<Entity>()
-    {
-        public boolean apply(@Nullable Entity entity)
-        {
-            return entity instanceof IMjdsMonster;
         }
     };
 
