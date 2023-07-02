@@ -80,8 +80,7 @@ public class EgoUtil {
 
         //send message
         CommonFunctions.SafeSendMsgToPlayer(
-                otherState == POPLON ?
-                        TextFormatting.BLUE : TextFormatting.LIGHT_PURPLE,
+                TextFormatting.BLUE,
                 playerEntity,
                 MessageDef.getSwapEgoMsgKey(otherState));
 

@@ -2,6 +2,7 @@ package com.deeplake.caiqiu.registry;
 
 import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.items.BaseItemIDF;
+import com.deeplake.caiqiu.items.ItemTeleportCommand;
 import com.deeplake.caiqiu.items.tabs.TabList;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
@@ -18,6 +19,6 @@ public class ItemRegistry {
 
     public static final RegistryObject<Item> ICON = ITEMS.register("icon", () -> new BaseItemIDF(UNCOMMON_PROP));
     public static final RegistryObject<Item> VOTE_REMOTE = ITEMS.register("vote_remote", () -> new BaseItemIDF(UNCOMMON_PROP));
-    public static final RegistryObject<Item> TELEPORT_COMMAND = ITEMS.register("teleport_command", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> TELEPORT_COMMAND = ITEMS.register("teleport_command", () -> new ItemTeleportCommand(EPIC_PROP));
     public static final RegistryObject<Item> RECALL_LIGHT = ITEMS.register("recall_light", () -> new BaseItemIDF(UNCOMMON_PROP));
 }

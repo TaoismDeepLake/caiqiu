@@ -1,1 +1,15 @@
-{"parent": "item/handheld","textures": {"layer0":"caiqiu:item/misc/teleport_command"}}
+{"parent": "item/handheld","textures": {"layer0":"caiqiu:item/misc/teleport_command"},
+  "overrides": [
+    {
+      "predicate": {
+        "caiqiu:anchor_ready": 1
+      },
+      "model": "caiqiu:item/teleport_command_active"
+    },{
+      "predicate": {
+        "caiqiu:anchor_ready": 0
+      },
+      "model": "caiqiu:item/teleport_command"
+    }
+  ]
+}
