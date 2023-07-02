@@ -1,0 +1,22 @@
+{
+		"display": {
+				"icon": {
+						"item": "backtones:map"
+				},
+				"title": {
+						"translate": "backtones.advancements.map.title"
+				},
+				"description": {
+						"translate": "backtones.advancements.map.description"
+				},
+				"show_toast": true,
+				"announce_to_chat": true,
+				"frame": "task"
+		},
+		"parent": "backtones:root",
+		"criteria": {
+				"impossible": {
+						"trigger": "minecraft:impossible"
+				}
+		}
+}

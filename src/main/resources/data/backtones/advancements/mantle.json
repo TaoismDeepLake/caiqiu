@@ -1,0 +1,22 @@
+{
+		"display": {
+				"icon": {
+						"item": "backtones:mantle"
+				},
+				"title": {
+						"translate": "backtones.advancements.mantle.title"
+				},
+				"description": {
+						"translate": "backtones.advancements.mantle.description"
+				},
+				"show_toast": true,
+				"announce_to_chat": true,
+				"frame": "task"
+		},
+		"parent": "backtones:root",
+		"criteria": {
+				"impossible": {
+						"trigger": "minecraft:impossible"
+				}
+		}
+}

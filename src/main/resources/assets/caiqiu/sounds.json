@@ -1,0 +1,14 @@
+{
+  "sound.jump": {
+    "subtitle": "subtitles.backtones.sound.jump",
+    "sounds": [
+      "backtones:random/bow"
+    ]
+  },
+  "sound.bgm_castle": {
+    "subtitle": "subtitles.backtones.sound.bgm_castle",
+    "sounds": [
+      "backtones:bgm/bgm_castle"
+    ]
+  }
+}
