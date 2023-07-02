@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench, a free, modern block model editor by JannisX11",
 	"parent" : "block/cube_all",
 	"textures": {
-		"0": "items/misc/huiyideng",
-		"particle": "items/misc/huiyideng"
+		"0": "caiqiu:item/misc/huiyideng",
+		"particle": "caiqiu:item/misc/huiyideng"
 	},
 	"elements": [
 		{

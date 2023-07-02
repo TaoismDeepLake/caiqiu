@@ -19,6 +19,7 @@ public class RegistryManager {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         BlockRegistry.BLOCKS.register(eventBus);
         ItemRegistry.ITEMS.register(eventBus);
+        EffectRegistry.EFFECT_LIST.register(eventBus);
         EntityRegistry.ENTITY_TYPES.register(eventBus);
         TileEntityRegistry.TILE_ENTITIES.register(eventBus);
 
