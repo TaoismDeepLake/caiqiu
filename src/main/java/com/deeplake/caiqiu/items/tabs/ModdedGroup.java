@@ -11,7 +11,7 @@ public class ModdedGroup extends ItemGroup {
 
     @Override
     public ItemStack makeIcon() {
-        return new ItemStack(ItemRegistry.COIN.get());
+        return new ItemStack(ItemRegistry.ICON.get());
         //return new ItemStack(ItemRegistry.testIngot2);
     }
 }

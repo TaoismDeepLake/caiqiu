@@ -95,9 +95,12 @@ end
 --	GenBlock("mjds_bgp"..i);
 --end
 
+GenItem("misc", "icon");
+GenItem("misc", "vote_remote");
+GenItem("misc", "teleport_command");
+GenItem("misc", "recall_light");
+GenBlock("score_measure");
 
---GenBlock("cleanse_sword");
-GenItem("weapon", "cleanse_sword");
 --GenItem("misc", "boots");
 --GenItem("misc", "devil_wing");
 --GenItem("misc", "jar");
@@ -171,10 +174,7 @@ GenItem("weapon", "cleanse_sword");
 --GenBlock("trap_spike_poison");
 
 
-for i = 0, 15 do
-	--GenBlock("dungeon_brick_"..i);
-	--GenBlock("adj_lock_on");
-end
+
 --GenBlock("flesh_block_1");
 --GenBlock("flesh_block_brain");
 --GenBlock("flesh_block_eye");

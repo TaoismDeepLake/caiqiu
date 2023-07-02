@@ -34,13 +34,13 @@ public enum BaseArmorTier implements IArmorMaterial {
 //    });
 
     TEST("armor_mor_sniper", 40, new int[]{5, 8, 10, 5}, 20, SoundEvents.ARMOR_EQUIP_DIAMOND, 2.0F, 0.0F, () -> {
-        return Ingredient.of(ItemRegistry.COIN.get());
+        return Ingredient.of(ItemRegistry.ICON.get());
     }),
     POPOLON("popolon_armor", 60, new int[]{0,0,0,0}, 5, SoundEvents.ARMOR_EQUIP_IRON, 0f, 0f, () -> {
-        return Ingredient.of(ItemRegistry.COIN.get());
+        return Ingredient.of(ItemRegistry.ICON.get());
     }),
     APHRODITE("aphrodite_armor", 60, new int[]{0,0,0,0}, 10, SoundEvents.ARMOR_EQUIP_IRON, 0f, 0f, () -> {
-        return Ingredient.of(ItemRegistry.COIN.get());
+        return Ingredient.of(ItemRegistry.ICON.get());
     });
 
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};

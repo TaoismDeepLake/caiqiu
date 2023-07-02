@@ -16,5 +16,8 @@ public class ItemRegistry {
     public static final Item.Properties RARE_PROP = new Item.Properties().rarity(Rarity.RARE).tab(TabList.MISC_GROUP);
     public static final Item.Properties EPIC_PROP = new Item.Properties().rarity(Rarity.EPIC).tab(TabList.MISC_GROUP);
 
-    public static final RegistryObject<Item> COIN = ITEMS.register("coin", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> ICON = ITEMS.register("icon", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> VOTE_REMOTE = ITEMS.register("vote_remote", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> TELEPORT_COMMAND = ITEMS.register("teleport_command", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> RECALL_LIGHT = ITEMS.register("recall_light", () -> new BaseItemIDF(UNCOMMON_PROP));
 }

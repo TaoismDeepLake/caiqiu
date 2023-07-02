@@ -1,8 +1,6 @@
 package com.deeplake.caiqiu.items;
 
 import com.deeplake.caiqiu.items.tabs.TabList;
-import com.deeplake.caiqiu.registry.EffectRegistry;
-import com.deeplake.caiqiu.util.AdvancementUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Food;
@@ -12,8 +10,6 @@ import net.minecraft.item.Rarity;
 import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.Effects;
 import net.minecraft.world.World;
-
-import static com.deeplake.caiqiu.util.CommonDef.TICK_PER_SECOND;
 
 public class BaseItemFood extends BaseItemIDF {
     static final Food defaultFood = (new Food.Builder().
@@ -25,15 +21,6 @@ public class BaseItemFood extends BaseItemIDF {
 
     public static final int buffLen = 180;
 
-    public static final Food F_PURE_WATER = (new Food.Builder().
-            alwaysEat().
-            effect(() -> new EffectInstance(EffectRegistry.B_PURE_WATER, buffLen * TICK_PER_SECOND, 1), 1.0f))
-            .build();
-
-    public static final Food F_MANTLE = (new Food.Builder().
-            alwaysEat().
-            effect(() -> new EffectInstance(EffectRegistry.B_MANTLE, buffLen * TICK_PER_SECOND, 1), 1.0f))
-            .build();
 
     public BaseItemFood(Food food) {
         super(new Properties().tab(TabList.MISC_GROUP).food(food));
@@ -53,13 +40,6 @@ public class BaseItemFood extends BaseItemIDF {
         {
             Food food = stack.getItem().getFoodProperties();
             PlayerEntity playerEntity = (PlayerEntity) livingEntity;
-            if (food == F_MANTLE)
-            {
-                AdvancementUtil.giveAdvancement(playerEntity, AdvancementUtil.ACHV_MANTLE);
-            }else if (food == F_PURE_WATER)
-            {
-                AdvancementUtil.giveAdvancement(playerEntity, AdvancementUtil.ACHV_PURE_WATER);
-            }
         }
 
         return super.finishUsingItem(stack, world, livingEntity);

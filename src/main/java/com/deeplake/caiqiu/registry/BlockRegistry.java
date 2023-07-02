@@ -1,6 +1,7 @@
 package com.deeplake.caiqiu.registry;
 
 import com.deeplake.caiqiu.IdlFramework;
+import com.deeplake.caiqiu.blocks.BaseBlockIDF;
 import com.deeplake.caiqiu.items.tabs.TabList;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
@@ -41,6 +42,6 @@ public class BlockRegistry {
 //    }
 
     //public static final RegistryObject<Block> CASTLE_BG = registerWithItem("castle_bg", BlockIndestructible::new);//vy'= (vy- g) * 0.98 //not transparent ver
-//    public static final RegistryObject<Block> CASTLE_BG = registerWithItem("castle_bg", BlockWallGlass::new);//vy'= (vy- g) * 0.98
+    public static final RegistryObject<Block> SCORE_MEASURE = registerWithItem("score_measure", BaseBlockIDF::new);//vy'= (vy- g) * 0.98
 
 }

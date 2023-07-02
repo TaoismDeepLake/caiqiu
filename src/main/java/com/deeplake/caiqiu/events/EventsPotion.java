@@ -2,8 +2,8 @@ package com.deeplake.caiqiu.events;
 
 import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.registry.EffectRegistry;
-import com.deeplake.caiqiu.util.EntityUtil;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,21 +24,15 @@ public class EventsPotion {
         if (source.getEntity() instanceof LivingEntity)
         {
             LivingEntity attacker = (LivingEntity) source.getEntity();
-            //canChangeDimensions = isNonBoss. Don't Ask Why.
-            //fishing_bobber is a boss, too.
-            if (EntityUtil.isBoss(hurtOne))
+            if (attacker.hasEffect(EffectRegistry.DUSK_SYNDROME.get()) && hurtOne instanceof PlayerEntity)
             {
-                if (attacker.getEffect(EffectRegistry.B_PURE_WATER) != null)
+                //only melee damage
+                if (!source.isProjectile() &&
+                        !source.isExplosion() &&
+                    !source.isFire() &&
+                    !source.isMagic())
                 {
-                    event.setAmount(event.getAmount() * 2);
-                }
-            }
-
-            if (EntityUtil.isBoss(attacker))
-            {
-                if (hurtOne.getEffect(EffectRegistry.B_MANTLE) != null)
-                {
-                    event.setAmount(event.getAmount() / 2f);
+                    event.setAmount(event.getAmount()+40);
                 }
             }
         }
