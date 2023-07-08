@@ -3,10 +3,13 @@ package com.deeplake.caiqiu;
 import com.deeplake.caiqiu.blocks.INeedInit;
 import com.deeplake.caiqiu.command.CommandScore;
 import com.deeplake.caiqiu.command.CommandScoreSuper;
+import com.deeplake.caiqiu.command.CommandSearchPhase;
 import com.deeplake.caiqiu.registry.RegistryManager;
 import com.deeplake.caiqiu.worldgen.infra.InitWorldGen;
+import com.mojang.brigadier.CommandDispatcher;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
+import net.minecraft.command.CommandSource;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
@@ -98,7 +101,9 @@ public class IdlFramework {
     }
 
     public void registerCommands(RegisterCommandsEvent event) {
-        CommandScore.register(event.getDispatcher());
-        CommandScoreSuper.register(event.getDispatcher());
+        CommandDispatcher<CommandSource> dispatcher = event.getDispatcher();
+        CommandScore.register(dispatcher);
+        CommandScoreSuper.register(dispatcher);
+        CommandSearchPhase.register(dispatcher);
     }
 }

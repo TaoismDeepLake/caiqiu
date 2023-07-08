@@ -38,6 +38,10 @@
   "caiqiu.command.score.force.save.success": "Forced save current data to score.txt!",
   "caiqiu.command.score.force.load.success": "Backup current score data as score.txt.bak, and forced loading all current data from score.txt",
 
+  "caiqiu.command.search.set.success": "Successfully initiated the Search Phase.",
+  "caiqiu.command.search.start.title": ">>Search Phase<<",
+  "caiqiu.command.search.end.msg": "Search Phase ended!",
+
 
   "entity.caiqiu.en_mjds_skeleton": "Majou Skeleton"
 }

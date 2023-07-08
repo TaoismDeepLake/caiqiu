@@ -10,11 +10,11 @@
   "caiqiu.msg.cur_score": "您的本学期量化分是 %s，唔噗噗噗",
   "caiqiu.msg.wait_score_check": "冷却中。请等待至 %s",
 
-  "cqiqiu.command.score.help.0": "需要OP级别2，作用于在线玩家，处理本学期量化分",
-  "cqiqiu.command.score.help.1": "使用 'cqscore query Tom' 查询 Tom 的分数;",
-  "cqiqiu.command.score.help.2": "使用 'cqscore add Tom -3' 给 Tom 扣除3分;",
-  "cqiqiu.command.score.help.3": "使用 'cqscore set Tom 8' 给 Tom 分数设为8;",
-  "cqiqiu.command.score.help.4": "使用 'cqscore list' 给你私信列举所有玩家分数。离线玩家显示为其UUID后6位。",
+  "caiqiu.command.score.help.0": "需要OP级别2，作用于在线玩家，处理本学期量化分",
+  "caiqiu.command.score.help.1": "使用 'cqscore query Tom' 查询 Tom 的分数;",
+  "caiqiu.command.score.help.2": "使用 'cqscore add Tom -3' 给 Tom 扣除3分;",
+  "caiqiu.command.score.help.3": "使用 'cqscore set Tom 8' 给 Tom 分数设为8;",
+  "caiqiu.command.score.help.4": "使用 'cqscore list' 给你私信列举所有玩家分数。离线玩家显示为其UUID后6位。",
   "caiqiu.command.score.set.success": "成功给 [%s] 同学的分数设为 %s",
   "caiqiu.command.score.query.success": "[%s] 同学的分数是 %s",
   "caiqiu.command.score.add.success": "成功加了 %s 分到 [%s] 同学上，其分数现在为 %s",
@@ -29,6 +29,9 @@
   "caiqiu.command.score.force.save.success": "已强制写入分数到 score.txt!",
   "caiqiu.command.score.force.load.success": "已备份当前分数到 score.txt.bak, 并用 score.txt 中的分数覆盖当前分数！",
 
+  "caiqiu.command.search.set.success": "成功开启搜查阶段。",
+  "caiqiu.command.search.start.title": ">>搜查阶段已开启<<",
+  "caiqiu.command.search.end.msg": "搜查阶段已结束！",
 
   "effect.caiqiu.despair": "绝望症",
   "effect.caiqiu.swamp_curse": "沼村诅咒",

@@ -1,22 +1,28 @@
 package com.deeplake.caiqiu.util;
 
 import com.deeplake.caiqiu.IdlFramework;
+import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.resources.I18n;
+import net.minecraft.command.CommandSource;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.Attribute;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.play.server.STitlePacket;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.vector.Vector3i;
+import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.text.TextComponentUtils;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraft.world.World;
@@ -29,6 +35,7 @@ import javax.annotation.Nullable;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Collection;
 import java.util.Random;
 
 import static com.deeplake.caiqiu.util.CommonDef.MAX_BUILD_HEIGHT;
@@ -45,6 +52,17 @@ public class CommonFunctions {
 //    {
 //        return hand == EntityEquipmentSlot.OFFHAND ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
 //    }
+
+    public static void showTitle(CommandSource commandSource,  ITextComponent msg, STitlePacket.Type type, int times) throws CommandSyntaxException {
+        Collection<ServerPlayerEntity> playerEntities = commandSource.getServer().getPlayerList().getPlayers();
+        for(ServerPlayerEntity serverplayerentity : playerEntities) {
+            serverplayerentity.connection.send(new STitlePacket(type, TextComponentUtils.updateForEntity(commandSource, msg, serverplayerentity, 0)));
+        }
+    }
+
+    public static void showTitle(CommandSource commandSource,  ITextComponent msg, STitlePacket.Type type) throws CommandSyntaxException {
+        showTitle(commandSource, msg, type, 0);
+    }
     public static void writeLine(OutputStream outputStream, String str)
     {
         try {
