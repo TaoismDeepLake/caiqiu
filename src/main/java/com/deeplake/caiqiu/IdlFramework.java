@@ -1,12 +1,15 @@
 package com.deeplake.caiqiu;
 
 import com.deeplake.caiqiu.blocks.INeedInit;
+import com.deeplake.caiqiu.command.CommandScore;
 import com.deeplake.caiqiu.registry.RegistryManager;
 import com.deeplake.caiqiu.worldgen.infra.InitWorldGen;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.color.BlockColors;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -28,6 +31,9 @@ public class IdlFramework {
         MinecraftForge.EVENT_BUS.register(this);
 
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+
+        IEventBus forgeBus = MinecraftForge.EVENT_BUS;
+        forgeBus.addListener(this::registerCommands);
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -88,5 +94,9 @@ public class IdlFramework {
         {
             logger.info(String.format(str, args));
         }
+    }
+
+    public void registerCommands(RegisterCommandsEvent event) {
+        CommandScore.register(event.getDispatcher());
     }
 }

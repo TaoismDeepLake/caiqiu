@@ -33,5 +33,4 @@ public class RegistryManager {
     public static <V extends IForgeRegistryEntry<V>> void register(IForgeRegistry<V> reg, String id, IForgeRegistryEntry<V> entry) {
         register(reg, new ResourceLocation(IdlFramework.MOD_ID, id), entry);
     }
-
 }

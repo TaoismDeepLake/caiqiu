@@ -26,6 +26,9 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
 
 import javax.annotation.Nullable;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.Random;
 
 import static com.deeplake.caiqiu.util.CommonDef.MAX_BUILD_HEIGHT;
@@ -42,6 +45,34 @@ public class CommonFunctions {
 //    {
 //        return hand == EntityEquipmentSlot.OFFHAND ? EnumHand.OFF_HAND : EnumHand.MAIN_HAND;
 //    }
+    public static void writeLine(OutputStream outputStream, String str)
+    {
+        try {
+            outputStream.write(str.getBytes());
+            outputStream.write("\n".getBytes());
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static String readLine(InputStream stream)
+    {
+        StringBuilder sb = new StringBuilder();
+        try {
+            int ch;
+            while ((ch = stream.read()) != -1) {
+                if (ch == '\n') {
+                    break;
+                }
+                sb.append((char) ch);
+            }
+        }
+        catch (Exception e)
+        {
+            IdlFramework.Log("readLine failed");
+        }
+        return sb.toString();
+    }
 
     public static Vector3i fromBlockPos(BlockPos pos)
     {
