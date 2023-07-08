@@ -18,7 +18,7 @@ public class PropertyRegistry {
         event.enqueueWork(() -> ItemModelsProperties.register(ItemRegistry.TELEPORT_COMMAND.get(),
                 new ResourceLocation(IdlFramework.MOD_ID, IDLNBTDef.ANCHOR_READY),
                 (itemStack, clientWorld, livingEntity) ->
-                    IDLNBTUtil.GetBoolean(itemStack, IDLNBTDef.ANCHOR_READY) ? 1.0f : 0.0f)
+                    IDLNBTUtil.GetBoolean(itemStack, IDLNBTDef.ANCHOR_READY) ? 1 : 0)
                 //IDLNBTUtil.GetIntAuto(livingEntity, NBTString.MJDS_EGO, 0)
         );
     }

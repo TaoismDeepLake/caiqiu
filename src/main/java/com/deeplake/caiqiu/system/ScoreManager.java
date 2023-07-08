@@ -20,6 +20,7 @@ import java.util.UUID;
 
 @Mod.EventBusSubscriber
 public class ScoreManager {
+    public static final String SCORE_TXT = "score.txt";
     HashMap<UUID, Integer> record = new HashMap<>();
     //Create Singleton instance
     private static ScoreManager _instance = new ScoreManager();
@@ -27,6 +28,8 @@ public class ScoreManager {
     public static ScoreManager getInstance() {
         return _instance;
     }
+
+    public static final String BACKUP_FILENAME = SCORE_TXT+".bak";
 
     public static int defaultScore = 50;
 
@@ -49,11 +52,26 @@ public class ScoreManager {
 
     public void save(World world)
     {
+        save(world, SCORE_TXT);
+    }
+
+    public void save(World world, String name)
+    {
         try {
             MinecraftServer server =  Objects.requireNonNull(world.getServer());
-            Path path = server.getWorldPath(FolderName.ROOT).resolve("score.txt");
+            Path path = server.getWorldPath(FolderName.ROOT).resolve(name);
 
             File f = new File(path.toString());
+            if (!f.exists())
+            {
+                if (f.createNewFile())
+                {
+                    IdlFramework.Log("Score file not found, create a new one");
+                }
+                else {
+                    throw new RuntimeException(new FileNotFoundException("Cannot create score file"));
+                }
+            }
             if(f.exists() && !f.isDirectory()) {
                 OutputStream outputStream = new FileOutputStream(path.toString());
                 for (UUID uuid: record.keySet())
@@ -80,7 +98,7 @@ public class ScoreManager {
         record.clear();
         try {
             MinecraftServer server =  Objects.requireNonNull(world.getServer());
-            Path path = server.getWorldPath(FolderName.ROOT).resolve("score.txt");
+            Path path = server.getWorldPath(FolderName.ROOT).resolve(SCORE_TXT);
             IdlFramework.Log("Score file path: %s", path.toString());
 
             File f = new File(path.toString());
@@ -138,13 +156,26 @@ public class ScoreManager {
             {
                 String uuidStr = uuid.toString();
                 IdlFramework.Log("Player %s not found", uuidStr);
+
+//                Path path = server.getWorldPath(FolderName.PLAYER_DATA_DIR).resolve(uuidStr+".dat");
+//                CompoundNBT compoundnbt = null;
+//
+//                try {
+//                    File file1 = new File(path.toString());
+//                    if (file1.exists() && file1.isFile()) {
+//                        compoundnbt = CompressedStreamTools.readCompressed(file1);
+//                    }
+//                } catch (Exception exception) {
+//                    IdlFramework.LogWarning("Failed to load player data for {}", uuidStr, exception);
+//                }
+
                 int score = getInstance().record.get(uuid);
                 CommonFunctions.SafeSendMsgToPlayer(entity,
                         uuidStr.substring(uuidStr.length() - 6) + " : " + score);
             }
             else {
                 String name = player.getName().getString();
-                
+
                 int score = getInstance().record.get(uuid);
                 CommonFunctions.SafeSendMsgToPlayer(entity,name + " : " + score);
             }

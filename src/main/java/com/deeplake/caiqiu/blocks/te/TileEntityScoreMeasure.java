@@ -3,6 +3,7 @@ package com.deeplake.caiqiu.blocks.te;
 
 import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.registry.TileEntityRegistry;
+import com.deeplake.caiqiu.system.ScoreManager;
 import com.deeplake.caiqiu.util.CommonFunctions;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
@@ -56,8 +57,7 @@ public class TileEntityScoreMeasure extends TileEntity {
 
     public void checkScore(PlayerEntity entity)
     {
-        int score = 90;
-        //todo:get Score
+        int score = ScoreManager.GetScore(entity.getUUID());
         CommonFunctions.SafeSendMsgToPlayer(TextFormatting.AQUA, entity, IdlFramework.MOD_ID +".msg.cur_score", score);
     }
 

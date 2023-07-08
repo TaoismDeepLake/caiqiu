@@ -51,7 +51,7 @@ public class CommandScore {
 
     private static int printHelp(CommandContext<CommandSource> ctx) {
         for (int i = 0; i < 5; i++) {
-            ctx.getSource().sendSuccess(new TranslationTextComponent("cqiqiu.command.score.help." + i), false);
+            ctx.getSource().sendSuccess(new TranslationTextComponent("caiqiu.command.score.help." + i), false);
         }
         return Command.SINGLE_SUCCESS;
     }

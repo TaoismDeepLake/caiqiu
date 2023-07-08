@@ -9,7 +9,7 @@
       "predicate": {
         "caiqiu:anchor_ready": 0
       },
-      "model": "caiqiu:item/teleport_command"
+      "model": "caiqiu:item/teleport_command_inactive"
     }
   ]
 }

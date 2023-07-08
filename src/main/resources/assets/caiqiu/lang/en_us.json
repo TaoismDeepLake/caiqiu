@@ -19,16 +19,24 @@
   "caiqiu.msg.teleport.set_anchor": "Anchor set!",
   "caiqiu.msg.cur_score": "Your current score is %s.",
   "caiqiu.msg.wait_score_check": "You have to wait until %s for next check.",
-  "cqiqiu.command.score.help.0": "Requires permision Lv.2, works on online players",
-  "cqiqiu.command.score.help.1": "Use 'cqscore query Tom' to look up score for Tom;",
-  "cqiqiu.command.score.help.2": "Use 'cqscore add Tom -3' to reduct 3 score for Tom;",
-  "cqiqiu.command.score.help.3": "Use 'cqscore set Tom 8' to set Tom's score as 8;",
-  "cqiqiu.command.score.help.4": "Use 'cqscore list' to list all player's score to you privately. Offline players will show as their uuid last 6 digits.",
+  "caiqiu.command.score.help.0": "Requires permision Lv.2, works on online players",
+  "caiqiu.command.score.help.1": "Use 'cqscore query Tom' to look up score for Tom;",
+  "caiqiu.command.score.help.2": "Use 'cqscore add Tom -3' to reduct 3 score for Tom;",
+  "caiqiu.command.score.help.3": "Use 'cqscore set Tom 8' to set Tom's score as 8;",
+  "caiqiu.command.score.help.4": "Use 'cqscore list' to list all player's score to you privately. Offline players will show as their uuid last 6 digits.",
   "caiqiu.command.score.set.success": "Successfully set player [%s]'s score to %s",
   "caiqiu.command.score.query.success": "Player [%s]'s score is %s",
   "caiqiu.command.score.add.success": "Successfully added %s score to player [%s], now their score to %s",
   "caiqiu.command.score.list.failure": "This command must be executed by a player.",
 
+  "caiqiu.command.score.force.help.0": "Requires permision Lv.2, works on urgent fixes",
+  "caiqiu.command.score.force.help.1": "Use 'forced load' to backup current score data as score.txt.bak",
+  "caiqiu.command.score.force.help.2": "  then load every score from the score.txt. Old backs will be overwritten",
+  "caiqiu.command.score.force.help.3": "Use 'forced save' to force save current score as score.txt",
+  "caiqiu.command.score.force.help.4": "  this produces no backup!",
+
+  "caiqiu.command.score.force.save.success": "Forced save current data to score.txt!",
+  "caiqiu.command.score.force.load.success": "Backup current score data as score.txt.bak, and forced loading all current data from score.txt",
 
 
   "entity.caiqiu.en_mjds_skeleton": "Majou Skeleton"

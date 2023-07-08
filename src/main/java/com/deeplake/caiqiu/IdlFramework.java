@@ -2,6 +2,7 @@ package com.deeplake.caiqiu;
 
 import com.deeplake.caiqiu.blocks.INeedInit;
 import com.deeplake.caiqiu.command.CommandScore;
+import com.deeplake.caiqiu.command.CommandScoreSuper;
 import com.deeplake.caiqiu.registry.RegistryManager;
 import com.deeplake.caiqiu.worldgen.infra.InitWorldGen;
 import net.minecraft.client.Minecraft;
@@ -98,5 +99,6 @@ public class IdlFramework {
 
     public void registerCommands(RegisterCommandsEvent event) {
         CommandScore.register(event.getDispatcher());
+        CommandScoreSuper.register(event.getDispatcher());
     }
 }
