@@ -33,10 +33,11 @@ public class EventsSeachPhase {
     }
 
     //stops the player from getting items from boxes
+    //This event can not be cancelled.
     @SubscribeEvent
     public static void onBoxEvent(net.minecraftforge.event.entity.player.PlayerContainerEvent.Open event) {
         if (isSearching) {
-            event.setCanceled(true);
+//            event.setCanceled(true);
         }
     }
 }

@@ -4,7 +4,9 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.ai.attributes.Attributes;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.potion.EffectInstance;
 import net.minecraft.potion.EffectType;
+import net.minecraft.potion.Effects;
 
 public class EffectAbsent extends BaseEffect{
     public EffectAbsent(EffectType effectType, int color) {
@@ -23,6 +25,7 @@ public class EffectAbsent extends BaseEffect{
         //hunger 1
         if (livingEntity instanceof PlayerEntity) {
             ((PlayerEntity) livingEntity).causeFoodExhaustion(0.005F);
+            livingEntity.addEffect(new EffectInstance(Effects.BLINDNESS, 20, 0, false, false));
         }
     }
 }

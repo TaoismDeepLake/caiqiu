@@ -1,6 +1,7 @@
 package com.deeplake.caiqiu;
 
 import com.deeplake.caiqiu.blocks.INeedInit;
+import com.deeplake.caiqiu.command.CommandClassTrial;
 import com.deeplake.caiqiu.command.CommandScore;
 import com.deeplake.caiqiu.command.CommandScoreSuper;
 import com.deeplake.caiqiu.command.CommandSearchPhase;
@@ -105,5 +106,6 @@ public class IdlFramework {
         CommandScore.register(dispatcher);
         CommandScoreSuper.register(dispatcher);
         CommandSearchPhase.register(dispatcher);
+        CommandClassTrial.register(dispatcher);
     }
 }

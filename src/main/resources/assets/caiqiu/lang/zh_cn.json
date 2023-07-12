@@ -6,6 +6,8 @@
   "block.caiqiu.score_measure": "定分仪",
   "itemGroup.group1": "才囚学园-澪吹寒",
   "nes.mjds": "才囚学园",
+
+  "caiqiu.msg.no_chat_allowed": "校规禁止私聊，唔噗噗噗。",
   "caiqiu.msg.teleport.set_anchor": "传送锚点已设置！",
   "caiqiu.msg.cur_score": "您的本学期量化分是 %s，唔噗噗噗",
   "caiqiu.msg.wait_score_check": "冷却中。请等待至 %s",
@@ -32,6 +34,12 @@
   "caiqiu.command.search.set.success": "成功开启搜查阶段。",
   "caiqiu.command.search.start.title": ">>搜查阶段已开启<<",
   "caiqiu.command.search.end.msg": "搜查阶段已结束！",
+
+  "caiqiu.command.class_trial.start.title": "学级裁判，开庭!",
+  "caiqiu.command.class_trial.set.success": "成功开启学级裁判。",
+  "caiqiu.command.class_trial.end.title": "学级裁判，闭庭!",
+  "caiqiu.command.class_trial.pause.title": "学级裁判，休庭!",
+  "caiqiu.command.class_trial.resume.title": "学级裁判，开庭!",
 
   "effect.caiqiu.despair": "绝望症",
   "effect.caiqiu.swamp_curse": "沼村诅咒",

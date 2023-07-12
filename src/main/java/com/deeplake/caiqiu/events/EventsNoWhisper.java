@@ -25,7 +25,7 @@ public class EventsNoWhisper {
             IdlFramework.Log("using: "+node.getNode().getName());
 
             String command = parseResults.getReader().getString();
-            if (command.startsWith("/w ") || command.startsWith("/tell ") || command.startsWith("/msg ")) {
+            if (command.startsWith("/w ") || command.startsWith("/tell ") || command.startsWith("/msg ") || command.startsWith("/tellraw ")) {
                 event.setCanceled(true);
                 Entity sender = parseResults.getContext().getSource().getEntity();
                 if (sender instanceof PlayerEntity)

@@ -16,6 +16,7 @@
   "effect.caiqiu.low_spirit": "Low Spirit",
   "effect.caiqiu.absent": "Absent-Minded",
 
+  "caiqiu.msg.no_chat_allowed": "No whisper allowed.",
   "caiqiu.msg.teleport.set_anchor": "Anchor set!",
   "caiqiu.msg.cur_score": "Your current score is %s.",
   "caiqiu.msg.wait_score_check": "You have to wait until %s for next check.",
@@ -42,6 +43,11 @@
   "caiqiu.command.search.start.title": ">>Search Phase<<",
   "caiqiu.command.search.end.msg": "Search Phase ended!",
 
+  "caiqiu.command.class_trial.start.title": "Class Trial Begin!",
+  "caiqiu.command.class_trial.set.success": "Successfully Initiated Class Trial.",
+  "caiqiu.command.class_trial.end.msg": "Class Trial Ended!",
+  "caiqiu.command.class_trial.pause.msg": "Class Trial On Hold",
+  "caiqiu.command.class_trial.resume.msg": "Class Trial Resumed",
 
   "entity.caiqiu.en_mjds_skeleton": "Majou Skeleton"
 }
