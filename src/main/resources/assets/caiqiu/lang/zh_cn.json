@@ -37,9 +37,9 @@
 
   "caiqiu.command.class_trial.start.title": "学级裁判，开庭!",
   "caiqiu.command.class_trial.set.success": "成功开启学级裁判。",
-  "caiqiu.command.class_trial.end.title": "学级裁判，闭庭!",
-  "caiqiu.command.class_trial.pause.title": "学级裁判，休庭!",
-  "caiqiu.command.class_trial.resume.title": "学级裁判，开庭!",
+  "caiqiu.command.class_trial.end.msg": "学级裁判，闭庭!",
+  "caiqiu.command.class_trial.pause.msg": "学级裁判，休庭!",
+  "caiqiu.command.class_trial.resume.msg": "学级裁判，开庭!",
 
   "effect.caiqiu.despair": "绝望症",
   "effect.caiqiu.swamp_curse": "沼村诅咒",

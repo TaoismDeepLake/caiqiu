@@ -40,8 +40,6 @@ public class EventsRenderScreen {
 
     @SubscribeEvent
     public static void onOverlayRender(final RenderGameOverlayEvent.Post event) {
-//        if (Minecraft.getInstance().options.getCameraType() != PointOfView.FIRST_PERSON)
-//            return;
 
         if (event.getType() != RenderGameOverlayEvent.ElementType.HELMET)
             return;

@@ -16,16 +16,16 @@ public class EffectAbsent extends BaseEffect{
                 (double)-0.15F, AttributeModifier.Operation.MULTIPLY_TOTAL);
     }
 
-    //copied from vanilla weakness
-    public double getAttributeModifierValue(int level, AttributeModifier modifier) {
-        return super.getAttributeModifierValue(level, modifier);
-    }
-
     public void applyEffectTick(LivingEntity livingEntity, int levelMinusOne) {
         //hunger 1
         if (livingEntity instanceof PlayerEntity) {
             ((PlayerEntity) livingEntity).causeFoodExhaustion(0.005F);
             livingEntity.addEffect(new EffectInstance(Effects.BLINDNESS, 20, 0, false, false));
         }
+    }
+
+    @Override
+    public boolean isDurationEffectTick(int p_76397_1_, int p_76397_2_) {
+        return true;
     }
 }

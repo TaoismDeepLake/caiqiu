@@ -35,4 +35,9 @@ public class EffectLowSpirit extends BaseEffect{
             }
         }
     }
+
+    @Override
+    public boolean isDurationEffectTick(int p_76397_1_, int p_76397_2_) {
+        return true;
+    }
 }
