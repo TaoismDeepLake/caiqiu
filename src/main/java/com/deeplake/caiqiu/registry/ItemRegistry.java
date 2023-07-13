@@ -4,6 +4,7 @@ import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.items.BaseItemIDF;
 import com.deeplake.caiqiu.items.ItemRecallLight;
 import com.deeplake.caiqiu.items.ItemTeleportCommand;
+import com.deeplake.caiqiu.items.ItemVoteRemote;
 import com.deeplake.caiqiu.items.tabs.TabList;
 import net.minecraft.item.Item;
 import net.minecraft.item.Rarity;
@@ -19,7 +20,7 @@ public class ItemRegistry {
     public static final Item.Properties EPIC_PROP = new Item.Properties().rarity(Rarity.EPIC).tab(TabList.MISC_GROUP);
 
     public static final RegistryObject<Item> ICON = ITEMS.register("icon", () -> new BaseItemIDF(UNCOMMON_PROP));
-    public static final RegistryObject<Item> VOTE_REMOTE = ITEMS.register("vote_remote", () -> new BaseItemIDF(UNCOMMON_PROP));
+    public static final RegistryObject<Item> VOTE_REMOTE = ITEMS.register("vote_remote", ItemVoteRemote::new);
     public static final RegistryObject<Item> TELEPORT_COMMAND = ITEMS.register("teleport_command", () -> new ItemTeleportCommand(EPIC_PROP));
     public static final RegistryObject<Item> RECALL_LIGHT = ITEMS.register("recall_light", ItemRecallLight::new);
 }

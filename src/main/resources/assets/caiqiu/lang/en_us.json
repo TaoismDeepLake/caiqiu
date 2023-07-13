@@ -49,5 +49,8 @@
   "caiqiu.command.class_trial.pause.msg": "Class Trial On Hold",
   "caiqiu.command.class_trial.resume.msg": "Class Trial Resumed",
 
+  "caiqiu.msg.recall_light_used": "You have accused %s.",
+  "caiqiu.msg.accused.count": "%s have received %s accusation.",
+
   "entity.caiqiu.en_mjds_skeleton": "Majou Skeleton"
 }
