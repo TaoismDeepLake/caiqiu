@@ -4,9 +4,11 @@ import com.google.common.base.Predicate;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.tags.ITag;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.EntityRayTraceResult;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 
@@ -84,6 +86,13 @@ public class EntityUtil {
         }
         return UNDER_SKY.apply(entity);
     }
+
+    public static EntityRayTraceResult findHitEntity(Entity caster, Vector3d startPoint, Vector3d endPoint, float distance) {
+       return ProjectileHelper.getEntityHitResult(caster.level, caster,
+               startPoint, endPoint,
+               caster.getBoundingBox().expandTowards(caster.getLookAngle().scale(distance)).inflate(1.0D),
+               NON_SPEC);
+   }
 //
 //    public static final Predicate<LivingEntity> LIVING = new Predicate<LivingEntity>()
 //    {

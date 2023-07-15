@@ -49,8 +49,14 @@
   "caiqiu.command.class_trial.pause.msg": "Class Trial On Hold",
   "caiqiu.command.class_trial.resume.msg": "Class Trial Resumed",
 
-  "caiqiu.msg.recall_light_used": "You have accused %s.",
+  "caiqiu.msg.recall_light_used": "Recall Light used against %s.",
+  "caiqiu.msg.accused": "You have accused %s.",
   "caiqiu.msg.accused.count": "%s have received %s accusation.",
+
+  "caiqiu.boss_bar.class_trial": "Class Trial : %s:%s:%s",
+  "caiqiu.boss_bar.class_trial.paused": "Class Trial [PAUSED]: %s:%s:%s",
+  "caiqiu.command.class_trial.cur.set.msg": "Trial Current Time set to %s ticks (%s:%s:%s)",
+  "caiqiu.command.class_trial.max.set.msg": "Trial MAX Time set to %s ticks (%s:%s:%s)",
 
   "entity.caiqiu.en_mjds_skeleton": "Majou Skeleton"
 }

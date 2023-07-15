@@ -15,6 +15,7 @@ import net.minecraft.item.BowItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.play.server.STitlePacket;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraft.util.math.AxisAlignedBB;
@@ -57,6 +58,13 @@ public class CommonFunctions {
         Collection<ServerPlayerEntity> playerEntities = commandSource.getServer().getPlayerList().getPlayers();
         for(ServerPlayerEntity serverplayerentity : playerEntities) {
             serverplayerentity.connection.send(new STitlePacket(type, TextComponentUtils.updateForEntity(commandSource, msg, serverplayerentity, 0)));
+        }
+    }
+
+    public static void showTitle(MinecraftServer server, ITextComponent msg, STitlePacket.Type type) throws CommandSyntaxException {
+        Collection<ServerPlayerEntity> playerEntities = server.getPlayerList().getPlayers();
+        for(ServerPlayerEntity serverplayerentity : playerEntities) {
+            serverplayerentity.connection.send(new STitlePacket(type, TextComponentUtils.updateForEntity(null, msg, serverplayerentity, 0)));
         }
     }
 
