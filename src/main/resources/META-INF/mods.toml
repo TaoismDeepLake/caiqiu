@@ -29,16 +29,12 @@ displayName="Cai Qiu Xue Yuan" #mandatory
 # A file name (in the root of the mod JAR) containing a logo for display
 logoFile="logo.png" #optional
 # A text field displayed in the mod UI
-credits="Thanks for Boson tutorial. This framework is based on that." #optional
+credits="" #optional
 # A text field displayed in the mod UI
 authors="Taoism Deeplake" #optional
 # The description text for the mod (multi line!) (#mandatory)
 description='''
-I played an NES game when I was young, it was called "Majou Densetsu II - Daimashikyou Galious".
-I couldn't read the Japanese in it, but I was still mystified by that game.
-Now, as a Novice 1.16 god, I think I could carry some nuggets of it into the Minecraft world, plus something from other games.
-This mod is written for the TeaCon 2021 Chinese modding competition, whose topic are "fictional gadgets".
-I hope the mongolian sword fits.
+Customized Mod
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.examplemod]] #optional

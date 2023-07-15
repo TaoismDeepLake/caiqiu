@@ -1,10 +1,7 @@
 package com.deeplake.caiqiu.registry;
 
 import com.deeplake.caiqiu.IdlFramework;
-import com.deeplake.caiqiu.effects.BaseEffect;
-import com.deeplake.caiqiu.effects.EffectAbsent;
-import com.deeplake.caiqiu.effects.EffectHopeSickness;
-import com.deeplake.caiqiu.effects.EffectLowSpirit;
+import com.deeplake.caiqiu.effects.*;
 import net.minecraft.potion.Effect;
 import net.minecraft.potion.EffectType;
 import net.minecraftforge.event.RegistryEvent;
@@ -23,7 +20,7 @@ public class EffectRegistry {
 
     public static final RegistryObject<Effect> DESPAIR_SICKNESS = register("despair", () -> new BaseEffect(EffectType.HARMFUL,0x777733));
     public static final RegistryObject<Effect> SWAMP_CURSE = register("swamp_curse", () -> new BaseEffect(EffectType.HARMFUL,0x777733));
-    public static final RegistryObject<Effect> DUSK_SYNDROME = register("dusk_syndrome", () -> new BaseEffect(EffectType.HARMFUL,0x777733));
+    public static final RegistryObject<Effect> DUSK_SYNDROME = register("dusk_syndrome", () -> new EffectDuskSyndrome(EffectType.HARMFUL,0x777733));
     public static final RegistryObject<Effect> RECALL_LIGHT = register("recall_light", () -> new BaseEffect(EffectType.HARMFUL,0x777733));
     public static final RegistryObject<Effect> HOPE_SICKNESS = register("hope_sickness", () -> new EffectHopeSickness(EffectType.HARMFUL,0x777733));
     public static final RegistryObject<Effect> INCUBATION = register("incubation", () -> new BaseEffect(EffectType.HARMFUL,0x777733));

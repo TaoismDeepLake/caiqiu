@@ -21,23 +21,6 @@ import java.util.List;
 public class EventsRenderScreen {
 //    private static final ConcurrentHashMap<ResourceLocation, Integer> overlays = new ConcurrentHashMap<ResourceLocation, Integer>();
 
-    //makes the screen red
-    @SubscribeEvent
-    public static void onRender(net.minecraftforge.client.event.RenderGameOverlayEvent.Pre event) {
-
-//        if (Minecraft.getInstance().player != null && Minecraft.getInstance().player.hasEffect(EffectRegistry.DESPAIR_SICKNESS.get())){
-////            event.getMatrixStack().pushPose();
-//            //make the screen red
-//            RenderSystem.enableBlend();
-//            RenderSystem.enableAlphaTest();
-//            RenderSystem.defaultBlendFunc();
-//            RenderSystem.color4f(1.0F, 0.0F, 0.0F, 0.3F);
-//            RenderSystem.defaultBlendFunc();
-//            RenderSystem.disableBlend();
-////            event.getMatrixStack().popPose();
-//        }
-    }
-
     @SubscribeEvent
     public static void onOverlayRender(final RenderGameOverlayEvent.Post event) {
 
