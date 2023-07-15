@@ -50,7 +50,7 @@
   "effect.caiqiu.low_spirit": "不振",
   "effect.caiqiu.absent": "恍惚",
 
-  "caiqiu.msg.recall_light_used": "有人对 %s 使用了回忆灯。",
+  "caiqiu.msg.recall_light_used": "%s 对 %s 使用了回忆灯。",
   "caiqiu.msg.accused": "你指认了 %s。",
   "caiqiu.msg.accused.count": "%s 收到了 %s 条指认。",
 

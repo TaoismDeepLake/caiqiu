@@ -49,7 +49,7 @@
   "caiqiu.command.class_trial.pause.msg": "Class Trial On Hold",
   "caiqiu.command.class_trial.resume.msg": "Class Trial Resumed",
 
-  "caiqiu.msg.recall_light_used": "Recall Light used against %s.",
+  "caiqiu.msg.recall_light_used": "%s used Recall Light used against %s.",
   "caiqiu.msg.accused": "You have accused %s.",
   "caiqiu.msg.accused.count": "%s have received %s accusation.",
 
