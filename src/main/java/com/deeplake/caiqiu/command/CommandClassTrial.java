@@ -96,6 +96,7 @@ public class CommandClassTrial {
                 new TranslationTextComponent(msg), title
         );
         ctx.getSource().sendSuccess(new TranslationTextComponent(msg),false);
+        EventsClassTrial.SwitchTrialPause();
         return Command.SINGLE_SUCCESS;
     }
 
@@ -125,7 +126,7 @@ public class CommandClassTrial {
                         EventsClassTrial.getSec(ticks)
                 ),false
         );
-        EventsClassTrial.SwitchTrialPause();
+
         return Command.SINGLE_SUCCESS;
     }
 
