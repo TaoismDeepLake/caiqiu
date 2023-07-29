@@ -14,10 +14,13 @@ public class EventsSeachPhase {
     //if isSearching, stops the player from tossing items
     @SubscribeEvent
     public static void onTossEvent(net.minecraftforge.event.entity.item.ItemTossEvent event) {
-        //If you cancel the event, the item will disappear!
-        if (isSearching) {
-            ItemEntity entity = event.getEntityItem();
-            entity.setNoPickUpDelay();
+        if (!event.getPlayer().isCreative())
+        {
+            //If you cancel the event, the item will disappear!
+            if (isSearching) {
+                ItemEntity entity = event.getEntityItem();
+                entity.setNoPickUpDelay();
+            }
         }
     }
 
@@ -27,17 +30,20 @@ public class EventsSeachPhase {
         //note that ItemPickupEvent is not cancelable and is fired after EntityItemPickupEvent
         //and improper handling will cause it to conflict the prev one, which relies on instant picking up.
         if (isSearching && event.getItem().tickCount > 10) {
-            event.setResult(Event.Result.DENY);
-            event.getItem().setPickUpDelay(100);
+            if (!event.getPlayer().isCreative())
+            {
+                event.setResult(Event.Result.DENY);
+                event.getItem().setPickUpDelay(100);
+            }
         }
     }
 
     //stops the player from getting items from boxes
     //This event can not be cancelled.
-    @SubscribeEvent
-    public static void onBoxEvent(net.minecraftforge.event.entity.player.PlayerContainerEvent.Open event) {
-        if (isSearching) {
-//            event.setCanceled(true);
-        }
-    }
+//    @SubscribeEvent
+//    public static void onBoxEvent(net.minecraftforge.event.entity.player.PlayerContainerEvent.Open event) {
+//        if (isSearching) {
+////            event.setCanceled(true);
+//        }
+//    }
 }

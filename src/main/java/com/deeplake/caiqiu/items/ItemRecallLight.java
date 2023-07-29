@@ -3,10 +3,10 @@ package com.deeplake.caiqiu.items;
 import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.util.CommonDef;
 import com.deeplake.caiqiu.util.CommonFunctions;
+import com.deeplake.caiqiu.util.ProjectileUtil;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.entity.projectile.ProjectileHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.UseAction;
 import net.minecraft.util.ActionResult;
@@ -47,7 +47,7 @@ public class ItemRecallLight extends BaseItemIDF{
                 Vector3d vector3d1 = user.getViewVector(1.0F);
                 Vector3d vector3d2 = userPos.add(vector3d1.x * range, vector3d1.y * range, vector3d1.z * range);
                 AxisAlignedBB axisalignedbb = user.getBoundingBox().expandTowards(vector3d1.scale(range)).inflate(1.0D, 1.0D, 1.0D);
-                EntityRayTraceResult entityraytraceresult = ProjectileHelper.getEntityHitResult(user, userPos, vector3d2, axisalignedbb, (p_215312_0_) -> {
+                EntityRayTraceResult entityraytraceresult = ProjectileUtil.getEntityHitResult(user, userPos, vector3d2, axisalignedbb, (p_215312_0_) -> {
                     return !p_215312_0_.isSpectator() && p_215312_0_.isPickable();
                 }, range*range);
 

@@ -5,6 +5,7 @@ import com.deeplake.caiqiu.registry.EffectRegistry;
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.MainWindow;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.player.ClientPlayerEntity;
 import net.minecraft.client.renderer.BufferBuilder;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
@@ -19,7 +20,18 @@ import java.util.List;
 
 @Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID, value = Dist.CLIENT)
 public class EventsRenderScreen {
-//    private static final ConcurrentHashMap<ResourceLocation, Integer> overlays = new ConcurrentHashMap<ResourceLocation, Integer>();
+
+    @SubscribeEvent
+    public static void onClientTick(RenderGameOverlayEvent.Pre event)
+    {
+        ClientPlayerEntity player = Minecraft.getInstance().player;
+        if (player != null
+                && event.getType() == RenderGameOverlayEvent.ElementType.PLAYER_LIST
+                && !player.isCreative()
+                && !player.isSpectator()) {
+            event.setCanceled(true);
+        }
+    }
 
     @SubscribeEvent
     public static void onOverlayRender(final RenderGameOverlayEvent.Post event) {
