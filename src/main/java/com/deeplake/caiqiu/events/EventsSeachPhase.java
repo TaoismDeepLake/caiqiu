@@ -1,13 +1,11 @@
 package com.deeplake.caiqiu.events;
 
-import com.deeplake.caiqiu.IdlFramework;
 import net.minecraft.entity.item.ItemEntity;
 import net.minecraftforge.event.entity.player.EntityItemPickupEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
 public class EventsSeachPhase {
     public static boolean isSearching = false;
 

@@ -1,6 +1,5 @@
 package com.deeplake.caiqiu.events;
 
-import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.util.AdvancementUtil;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.ServerPlayerEntity;
@@ -10,9 +9,8 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.player.PlayerXpEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
 public class EventsCombat {
 
     @SubscribeEvent(priority = EventPriority.HIGH)

@@ -1,7 +1,8 @@
 package com.deeplake.caiqiu.events;
 
-import com.deeplake.caiqiu.IdlFramework;
-import com.deeplake.caiqiu.util.*;
+import com.deeplake.caiqiu.util.DesignUtil;
+import com.deeplake.caiqiu.util.EgoUtil;
+import com.deeplake.caiqiu.util.MJDSDefine;
 import net.minecraft.block.Blocks;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.LivingEntity;
@@ -13,9 +14,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.common.ForgeHooks;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
 public class EventsUpdate {
 
     @SubscribeEvent

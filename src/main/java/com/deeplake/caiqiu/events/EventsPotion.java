@@ -1,15 +1,13 @@
 package com.deeplake.caiqiu.events;
 
-import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.registry.EffectRegistry;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
 public class EventsPotion {
     @SubscribeEvent
     public static void onHurt(LivingHurtEvent event)

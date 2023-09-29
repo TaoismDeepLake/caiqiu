@@ -30,7 +30,7 @@ public class IdlFramework {
     public static final boolean SHOW_WARN = true;
 
     public IdlFramework(){
-        RegistryManager.RegisterAll();
+//        RegistryManager.RegisterAll();
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGH, InitWorldGen::onBiomeLoading);
         MinecraftForge.EVENT_BUS.register(this);
@@ -38,7 +38,7 @@ public class IdlFramework {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         IEventBus forgeBus = MinecraftForge.EVENT_BUS;
-        forgeBus.addListener(this::registerCommands);
+//        forgeBus.addListener(this::registerCommands);
     }
 
     private void setup(final FMLCommonSetupEvent event)

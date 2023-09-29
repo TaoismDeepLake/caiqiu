@@ -1,17 +1,14 @@
 package com.deeplake.caiqiu.events;
 
-import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.items.INeedLogNBT;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.text.StringTextComponent;
-import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID, value = Dist.CLIENT)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID, value = Dist.CLIENT)
 public class EventsItemDesc {
     @SubscribeEvent
     public static void onDesc(ItemTooltipEvent event)

@@ -17,7 +17,6 @@ import net.minecraft.world.BossInfo;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.LogicalSide;
-import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.server.ServerLifecycleHooks;
 
 import java.util.HashMap;
@@ -25,7 +24,7 @@ import java.util.UUID;
 
 import static com.deeplake.caiqiu.command.CommandClassTrial.TRIAL_END_MSG;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
+//@Mod.EventBusSubscriber(modid = IdlFramework.MOD_ID)
 public class EventsClassTrial {
     public enum EnumClassTrialStatus{
         NONE,

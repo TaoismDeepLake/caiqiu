@@ -33,7 +33,7 @@ public class EventsRenderScreen {
         }
     }
 
-    @SubscribeEvent
+    //@SubscribeEvent
     public static void onOverlayRender(final RenderGameOverlayEvent.Post event) {
 
         if (event.getType() != RenderGameOverlayEvent.ElementType.HELMET)

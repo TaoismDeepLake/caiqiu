@@ -1,8 +1,8 @@
 package com.deeplake.caiqiu.items;
 
-import com.deeplake.caiqiu.items.tabs.TabList;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class BaseItemIDF extends Item {
@@ -10,7 +10,7 @@ public class BaseItemIDF extends Item {
     public Properties properties;
 
     public BaseItemIDF() {
-        this(new Properties().tab(TabList.MISC_GROUP));
+        this(new Properties().tab(ItemGroup.TAB_BREWING));
     }
 
     public BaseItemIDF(Properties p_i48487_1_) {
