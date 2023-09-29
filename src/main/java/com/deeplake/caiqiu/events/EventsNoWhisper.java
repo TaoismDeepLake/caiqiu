@@ -2,18 +2,11 @@ package com.deeplake.caiqiu.events;
 
 import com.deeplake.caiqiu.IdlFramework;
 import com.deeplake.caiqiu.gui.ModifiedChatScreen;
-import com.deeplake.caiqiu.util.CommonFunctions;
-import com.mojang.brigadier.ParseResults;
-import com.mojang.brigadier.context.ParsedCommandNode;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screen.ChatScreen;
 import net.minecraft.client.gui.screen.Screen;
-import net.minecraft.command.CommandSource;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.text.ITextComponent;
-import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.TranslationTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -26,26 +19,26 @@ import net.minecraftforge.fml.common.Mod;
 public class EventsNoWhisper {
     public static final String NO_CHAT_ALLOWED = IdlFramework.MOD_ID + ".msg.no_chat_allowed";
     //subscribe CommandEvent and stops the player from use "/w","/tell" and "/msg" command
-    @SubscribeEvent
-    public static void onCommandEvent(net.minecraftforge.event.CommandEvent event) {
-        ParseResults<CommandSource> parseResults = event.getParseResults();
-        if (!parseResults.getContext().getNodes().isEmpty()) {
-//        if (parseResults.getContext().getRange().getStart() == 0) {
-            ParsedCommandNode<CommandSource> node = parseResults.getContext().getNodes().get(0);
-            Entity sender = parseResults.getContext().getSource().getEntity();
-            if (sender instanceof PlayerEntity)
-            {
-                String command = parseResults.getReader().getString();
-                IdlFramework.Log("using: "+command+"[END]");
-                if (command.startsWith("/w ") || command.startsWith("/tell ") || command.startsWith("/msg ") || command.startsWith("/tellraw ") ||
-                        command.startsWith("w ") || command.startsWith("tell ") || command.startsWith("msg ") || command.startsWith("tellraw ")
-                ) {
-                    event.setCanceled(true);
-                    CommonFunctions.SafeSendMsgToPlayer(TextFormatting.RED, (LivingEntity) sender, NO_CHAT_ALLOWED);
-                }
-            }
-        }
-    }
+//    @SubscribeEvent
+//    public static void onCommandEvent(net.minecraftforge.event.CommandEvent event) {
+//        ParseResults<CommandSource> parseResults = event.getParseResults();
+//        if (!parseResults.getContext().getNodes().isEmpty()) {
+////        if (parseResults.getContext().getRange().getStart() == 0) {
+//            ParsedCommandNode<CommandSource> node = parseResults.getContext().getNodes().get(0);
+//            Entity sender = parseResults.getContext().getSource().getEntity();
+//            if (sender instanceof PlayerEntity)
+//            {
+//                String command = parseResults.getReader().getString();
+//                IdlFramework.Log("using: "+command+"[END]");
+//                if (command.startsWith("/w ") || command.startsWith("/tell ") || command.startsWith("/msg ") || command.startsWith("/tellraw ") ||
+//                        command.startsWith("w ") || command.startsWith("tell ") || command.startsWith("msg ") || command.startsWith("tellraw ")
+//                ) {
+//                    event.setCanceled(true);
+//                    CommonFunctions.SafeSendMsgToPlayer(TextFormatting.RED, (LivingEntity) sender, NO_CHAT_ALLOWED);
+//                }
+//            }
+//        }
+//    }
 
     @OnlyIn(value = Dist.CLIENT)
     @SubscribeEvent
